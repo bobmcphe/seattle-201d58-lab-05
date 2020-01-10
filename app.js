@@ -88,10 +88,11 @@ function sumAndMultiply(a, b, c) { //eslint-disable-line
             return [
               finalSum, 
               finalQuotient,
-              a + ' and ' + b + ' and ' + c + ' is ' + finalSum + ".",
+              a + ' and ' + b + ' and ' + c + ' sum to ' + finalSum + ".",
               "The product of " + a + ' and ' + b + " and " + c + " is " + finalQuotient + ".",
             ];
-
+            // "4 and 7 and 5 sum to 16."
+            // "The product of 4 and 7 and 5 is 140."
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
