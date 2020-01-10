@@ -137,7 +137,38 @@ var testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) { //eslint-disable-line
 
+  var sum = 0;
+  for(i=0;i<sumArr.length;i++) {
+    sumArr[i], 
+  
+
+
+  return [
+    arrSum(testArray[0], testArray[1]),
+    "2,3,4 was passed in as an array of numbers, and 9 is their sum."
+  ];
+  }
 }
+
+var testArray2 = [2, 3, 4]; //eslint-disable-line
+
+
+
+function sumArray2(sumArr) {
+
+  var Index = 0;
+  // While Index is less than the length of arr:
+  while(Index < sumArr.length) {
+
+      // Set an enemy variable to enemies[enemyIndex]
+      var numberToAdd = sumArr[Index];
+      
+      // Increment Index
+      Index += numberToAdd;
+  }
+  return Index;
+      
+  }
 
 // Here is the test for sumArray(); uncomment it to run it
 
