@@ -15,8 +15,7 @@ console to see if the test passes.*/
 // Write your code here
 function sum(a, b) { //eslint-disable-line
   var total = a + b;
-  return [total, "The sum of " + a + ' and ' + b +
-    ' is ' + total + "."];
+  return [total, "The sum of " + a + ' and ' + b + ' is ' + total + "."];
 }
 
 // Here is the test for sum(); uncomment it to run it
@@ -37,26 +36,41 @@ Test this function by hand in the console to get it working, and when you think 
 finished, uncomment the call for the testMultiply() function and see if the test passes.*/
 
 // Write your code here
+
 function multiply(a, b) { //eslint-disable-line
   var multiplyTotal = a * b;
   return [multiplyTotal, "The product of " + a + ' and ' + b + ' is ' + multiplyTotal + '.'];
+
 }
 
+
 // Here is the test for multiply(); uncomment it to run it
- testMultiply(5,9);
+
+testMultiply(5,9);
+
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub 
 // and your laptop. Don't forget to create a new branch for your work on the next question!
 
+
+
+
+
+
 /////////////////////////////////////
 /* Problem 3
-Write a function called sumAndMultiply() that takes in three numbers as separate arguments
-and returns an array where the first element is the sum of those three numbers, the second 
-element is the product of those three numbers,  and the third and fourth elements are strings 
-that EXACTLY follow this example and use the values that were input into the function:
+
+Write a function called sumAndMultiply() that takes in three
+ numbers as separate arguments and returns an array where the 
+ first element is the sum of those three numbers, the second 
+ element is the product of those three numbers,  and the third 
+ and fourth elements are strings that EXACTLY follow this example 
+ and use the values that were input into the function:
+
 
 Third element: "4 and 7 and 5 sum to 16."
 Fourth element: "The product of 4 and 7 and 5 is 140."
+
 
 IMPORTANT DETAIL: You may not use the arithmetic operators + and * in this function. To do addition, 
 use your sum() function, and to do multiplication, use your multiply() function that you've already
@@ -66,13 +80,39 @@ use your sum() function, and to do multiplication, use your multiply() function 
 Test this function by hand in the console to get it working, and when you think it is finished, 
 uncomment the call for the testSumAndMultiply() function and see if the test passes.*/
 
+
 // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
 
+    //   var getSum = function(a, b) { //found on StackOverflow
+    //     if (b == 0) {
+    //         return a;
+    //     } else {
+    //         return getSum(a ^ b, (a & b) << 1)
+    //     }
+    // };
+            var partialSum = sum(a,b);
+            var totalSum = sum(partialSum[0], c);
+
+            var finalSum = totalSum[0];
+
+            var partialQuotient = multiply(a, b);
+            var totalQuotient = multiply(partialQuotient[0], c);
+
+            var finalQuotient = totalQuotient[0];
+
+            return [
+              finalSum, 
+              finalQuotient,
+              a + ' and ' + b + ' and ' + c + ' sum to ' + finalSum + ".",
+              "The product of " + a + ' and ' + b + " and " + c + " is " + finalQuotient + ".",
+            ];
+            // "4 and 7 and 5 sum to 16."
+            // "The product of 4 and 7 and 5 is 140."
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
-// testSumAndMultiply(4,7,5);
+testSumAndMultiply(4,7,5);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and 
 // your laptop. Don't forget to create a new branch for your work on the next question!
