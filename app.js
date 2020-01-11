@@ -179,6 +179,11 @@ function sumArray(sumArr) { //eslint-disable-line
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and 
 // your laptop. Don't forget to create a new branch for your work on the next question!
 
+
+
+
+
+
 /////////////////////////////////////
 /* Problem 5
 Write a function called multiplyArray() that takes an array of numbers as its argument and returns 
@@ -198,10 +203,23 @@ uncomment the call for the testMultiplyArray() function and see if the test pass
 // Write your code here
 function multiplyArray(multArr) { //eslint-disable-line
 
-}
+    var partialProd = multiply(multArr[0], multArr[1]); 
+    var totalProd = multiply(partialProd[0], multArr[2]); 
+  
+    var finalProd = totalProd[0];
+    
+    //console.log(partialProd);
+    // console.log(finalProd);
+    // console.log(totalProd[0]);
+  
+    return [
+      totalProd[0],
+      'The numbers 2,3,4 have a product of ' + totalProd[0] + '.'
+    ];
+    }
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyArray(testArray);
+ testMultiplyArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 
@@ -209,6 +227,15 @@ function multiplyArray(multArr) { //eslint-disable-line
 // the stretch goal below...
 
 // Don't forget to create a new branch for your work on the next question, if you attempt it.
+
+
+
+
+
+
+
+
+
 
 /////////////////////////////////////
 /* STRETCH GOAL: Problem 6
