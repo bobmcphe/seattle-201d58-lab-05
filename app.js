@@ -136,39 +136,37 @@ uncomment the call for the testSumArray() function and see if the test passes.*/
 var testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) { //eslint-disable-line
+  var partialSum = sum(sumArr[0], sumArr[1]);
+  var totalSum = sum(partialSum[0], sumArr[3]);
 
-  var sum = 0;
-  for(i=0;i<sumArr.length;i++) {
-    sumArr[i], 
-  
-
+  var finalSum = totalSum[0];
 
   return [
-    arrSum(testArray[0], testArray[1]),
-    "2,3,4 was passed in as an array of numbers, and 9 is their sum."
+    finalSum[0],
+    '2,3,4 was passed in as an array of numbers, and ' + finalSum + ' is their sum.'
   ];
   }
-}
-
-var testArray2 = [2, 3, 4]; //eslint-disable-line
 
 
+// var testArray2 = [2, 3, 4]; //eslint-disable-line
 
-function sumArray2(sumArr) {
 
-  var Index = 0;
-  // While Index is less than the length of arr:
-  while(Index < sumArr.length) {
 
-      // Set an enemy variable to enemies[enemyIndex]
-      var numberToAdd = sumArr[Index];
+// function sumArray2(sumArr) {
+
+//   var Index = 0;
+//   // While Index is less than the length of arr:
+//   while(Index < sumArr.length) {
+
+//       // Set an enemy variable to enemies[enemyIndex]
+//       var numberToAdd = sumArr[Index];
       
-      // Increment Index
-      Index += numberToAdd;
-  }
-  return Index;
+//       // Increment Index
+//       Index += numberToAdd;
+//   }
+//   return Index;
       
-  }
+//   }
 
 // Here is the test for sumArray(); uncomment it to run it
 
